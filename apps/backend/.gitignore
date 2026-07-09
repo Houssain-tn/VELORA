@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+dist/
+
+# Environment (NEVER commit real secrets)
+.env
+.env.production
+.env.local
+
+# Logs (generated at runtime — not source code)
+*.log
+backend_startup.log
+logs/
+
+# Database backups (contain sensitive data)
+backups/
+
+# Debug / scratch files
+scratch/
+check_user.ts
+
+# OS files
+.DS_Store
+Thumbs.db

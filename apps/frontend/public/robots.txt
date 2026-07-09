@@ -1,0 +1,9 @@
+# Velora PRO — robots.txt
+# Block all search engine crawlers from indexing this private B2B application.
+# The application requires authentication and should NOT be indexed by search engines.
+
+User-agent: *
+Disallow: /
+
+# Allow health check endpoint for monitoring services (optional)
+# Allow: /api/health
