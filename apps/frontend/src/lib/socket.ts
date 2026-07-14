@@ -2,8 +2,9 @@ import { io, Socket } from 'socket.io-client';
 import Cookies from 'js-cookie';
 import { useSocketStore } from '@/stores/useSocketStore';
 
-// Use current origin to leverage Vite proxy
-const SOCKET_URL = window.location.origin;
+// Use VITE_API_URL in production, otherwise fallback to current origin
+const API_URL = import.meta.env.VITE_API_URL || window.location.origin;
+const SOCKET_URL = API_URL.replace(/\/api\/?$/, '');
 
 class SocketManager {
   private socket: Socket | null = null;
